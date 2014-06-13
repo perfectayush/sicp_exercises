@@ -22,7 +22,7 @@
     (make-interval (min p1 p2 p3 p4) (max p1 p2 p3 p4))))
 
 (define (span-zero? y) 
-  (or (<= 0 (upper-bound y)) 
+  (and (<= 0 (upper-bound y)) 
       (>= 0 (lower-bound y))))
 
 (define (div-interval x y)
@@ -34,6 +34,7 @@
 
 (define (width x) (/ (- (upper-bound x) (lower-bound x)) 2.0))
 
-(define interval1 (make-interval 6.12 7.48))
+(define a (make-interval 6.12 7.48))
+(define b (make-interval 2.58 2.97))
 
-(define interval2 (make-interval 2.58 2.97))
+()

@@ -25,7 +25,7 @@
         (make-interval (min p1 p4) (max p1 p4)))))
 
 (define (span-zero? y) 
-  (or (<= 0 (upper-bound y)) 
+  (and (<= 0 (upper-bound y)) 
       (>= 0 (lower-bound y))))
 
 (define (div-interval x y)
